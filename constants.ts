@@ -242,7 +242,7 @@ export const ALGORITHMS: Record<AlgorithmType, Algorithm> = {
     id: AlgorithmType.BASIC_INFERENCE,
     name: "Inferência Básica (Chatbot)",
     description: "Baixo retorno, mas estável e seguro.",
-    revenuePerFlops: 0.80, // Reduced from 1.50
+    revenuePerFlops: 1.50, // REVERTED TO HIGHER VALUE
     energyPenalty: 1.0,
     heatPenalty: 1.0,
     unlockCost: 0
@@ -251,7 +251,7 @@ export const ALGORITHMS: Record<AlgorithmType, Algorithm> = {
     id: AlgorithmType.TRAINING_LLM,
     name: "Treinamento de LLM",
     description: "Uso intensivo de GPU. Lucro alto.",
-    revenuePerFlops: 1.80, // Reduced from 2.80
+    revenuePerFlops: 2.80, // REVERTED TO HIGHER VALUE
     energyPenalty: 1.4,
     heatPenalty: 1.6,
     unlockCost: 15000
@@ -260,7 +260,7 @@ export const ALGORITHMS: Record<AlgorithmType, Algorithm> = {
     id: AlgorithmType.CRYPTO_MINING,
     name: "Mineração de Cripto",
     description: "Transforma eletricidade em dinheiro. Gera muito calor.",
-    revenuePerFlops: 1.40, // Reduced from 2.10
+    revenuePerFlops: 2.10, // REVERTED TO HIGHER VALUE
     energyPenalty: 2.2,
     heatPenalty: 2.5,
     unlockCost: 8000
@@ -269,7 +269,7 @@ export const ALGORITHMS: Record<AlgorithmType, Algorithm> = {
     id: AlgorithmType.SCIENTIFIC_SIM,
     name: "Simulação Científica",
     description: "Contratos de longo prazo. Eficiente.",
-    revenuePerFlops: 1.50, // Reduced from 2.30
+    revenuePerFlops: 2.30, // REVERTED TO HIGHER VALUE
     energyPenalty: 1.1,
     heatPenalty: 1.1,
     unlockCost: 35000
@@ -278,7 +278,7 @@ export const ALGORITHMS: Record<AlgorithmType, Algorithm> = {
     id: AlgorithmType.AGI_RESEARCH,
     name: "Pesquisa de AGI",
     description: "O futuro. Retornos exponenciais.",
-    revenuePerFlops: 4.50, // Reduced from 6.00
+    revenuePerFlops: 6.00, // REVERTED TO HIGHER VALUE
     energyPenalty: 2.5,
     heatPenalty: 2.5,
     unlockCost: 2000000

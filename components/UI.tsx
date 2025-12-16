@@ -3,6 +3,38 @@ import { ALGORITHMS, CATALOG, COST_PER_KW, COST_PER_THERMAL_UNIT, EMPLOYEE_SALAR
 import { AlgorithmType, GameState, ItemType, Location, ToolMode, Contract } from '../types';
 import { Zap, Cpu, Thermometer, DollarSign, Server, Wind, Lock, Check, MapPin, Activity, AlertTriangle, MousePointer2, Move, Trash2, Briefcase, TrendingUp, Users, PenLine, Building2 } from 'lucide-react';
 
+// Fix for missing JSX elements in TypeScript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      div: any;
+      span: any;
+      p: any;
+      h1: any;
+      h2: any;
+      h3: any;
+      h4: any;
+      button: any;
+      input: any;
+    }
+  }
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements {
+        div: any;
+        span: any;
+        p: any;
+        h1: any;
+        h2: any;
+        h3: any;
+        h4: any;
+        button: any;
+        input: any;
+      }
+    }
+  }
+}
+
 // Utility for large numbers
 const formatNumber = (num: number, suffix = '', decimals = 1) => {
     if (num >= 1e12) return (num / 1e12).toFixed(decimals) + 'T' + suffix; // Trillion / Tera

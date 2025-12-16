@@ -22,6 +22,38 @@ import {
     CONTRACT_GEN_CHANCE
 } from './constants';
 
+// Fix for missing JSX elements in TypeScript
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      div: any;
+      span: any;
+      p: any;
+      h1: any;
+      h2: any;
+      h3: any;
+      h4: any;
+      button: any;
+      input: any;
+    }
+  }
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements {
+        div: any;
+        span: any;
+        p: any;
+        h1: any;
+        h2: any;
+        h3: any;
+        h4: any;
+        button: any;
+        input: any;
+      }
+    }
+  }
+}
+
 const generateId = () => Math.random().toString(36).substr(2, 9);
 
 const App: React.FC = () => {
@@ -34,7 +66,7 @@ const App: React.FC = () => {
     activeAlgorithm: AlgorithmType.BASIC_INFERENCE,
     lastTick: Date.now(),
     company: {
-        name: "NeoCloud Inc.",
+        name: "Escolha um nome da empresa",
         isPublic: false,
         stockPrice: 10.0,
         sharesOutstanding: 1000000,
@@ -164,7 +196,14 @@ const App: React.FC = () => {
 
         // Throttling Logic
         let efficiency = 1.0;
-        if (energyCons > energyMax) efficiency *= 0.1; 
+        
+        // Power Throttling: Proportional instead of Binary 0.1 penalty
+        if (energyCons > energyMax) {
+             const ratio = energyMax / Math.max(energyCons, 1);
+             efficiency *= ratio;
+        }
+
+        // Thermal Throttling
         if (heatGen > cooling) {
             const ratio = cooling / Math.max(heatGen, 1);
             efficiency *= ratio; 

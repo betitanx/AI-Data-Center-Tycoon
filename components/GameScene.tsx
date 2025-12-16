@@ -14,6 +14,17 @@ declare global {
       mesh: any;
       planeGeometry: any;
       meshBasicMaterial: any;
+      
+      // HTML Elements
+      div: any;
+      span: any;
+      p: any;
+      h1: any;
+      h2: any;
+      h3: any;
+      h4: any;
+      button: any;
+      input: any;
     }
   }
   // Also augment React.JSX
@@ -26,6 +37,17 @@ declare global {
         mesh: any;
         planeGeometry: any;
         meshBasicMaterial: any;
+        
+        // HTML Elements
+        div: any;
+        span: any;
+        p: any;
+        h1: any;
+        h2: any;
+        h3: any;
+        h4: any;
+        button: any;
+        input: any;
       }
     }
   }
