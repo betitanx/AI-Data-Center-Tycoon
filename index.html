@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Data Center Tycoon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              tech: {
+                900: '#0f172a',
+                800: '#1e293b',
+                700: '#334155',
+                500: '#3b82f6',
+                accent: '#10b981',
+                danger: '#ef4444',
+                warning: '#f59e0b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body, html, #root {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background-color: #0f172a;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.4.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "three": "https://esm.sh/three@^0.182.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "uuid": "https://esm.sh/uuid@^13.0.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

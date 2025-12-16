@@ -1,0 +1,5 @@
+{
+  "name": "AI Data Center Tycoon",
+  "description": "Um simulador tridimensional de gerenciamento de data centers para Inteligência Artificial. Construa, gerencie energia e resfriamento, e pesquise novos algoritmos.",
+  "requestFramePermissions": []
+}
